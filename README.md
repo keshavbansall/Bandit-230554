@@ -14,7 +14,7 @@ Passsword : bandit0
 
 -----------------------------------------------------------------------------
 
-### Bandit Level 1
+### Bandit Level 0 to Level 1
 The password is in *readme* file in home directory.
 
 Using `cat readme` to view the contents of the file.
@@ -23,7 +23,7 @@ Password : NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
 
 ------------------------------------------------------------------------------
 
-### Bandit Level 2
+### Bandit Level 1 to Level 2
 The password is stored in file with name as  -. Since the filename starts with a dash (-) we cannot directly read the file using the general commands because dash is generally used by commands to specify options and arguments.
 To view contents of file use `cat <-` or `more -`.
 
@@ -31,7 +31,7 @@ Password : rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
 
 --------------------------------------------------------------------------------
 
-### Bandit Level 3
+### Bandit Level 2 to Level 3
 The password is stored in file with spaces in its name. `more` or `cat` command by default doesnt perceive a filename with spaces because the general syntax for Linux commands is  `command [options] argument1 argument2` here, the arguments are separated by spaces so if we try to use filenames with spaces directly, it will be treated as separate arguments rather than just one argument.
 
 To view file contents we will have to use :
@@ -46,7 +46,7 @@ Password : aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
 
 ------------------------------------------------------------------------------------
 
-### Bandit Level 4
+### Bandit Level 3 to Level 4
 The password is stored in hidden file in inhere directory .
 
 So first we use `cd inhere` to change directories.
@@ -61,7 +61,7 @@ Password : 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
 
 --------------------------------------------------------------------------------------
 
-### Bandit Level 5
+### Bandit Level 4 to Level 5
 First we move to the inhere directory using `cd inhere`. `ls -a` lists all the files and directories in it. We see that there are 10 Dash file in the inhere directory. Since the password is stored in only human readable file i.e. the files in the directory will have Binary data type except for one which will have humanly readable which will be ASCII.
 
 To find such file in directory we use `file ./*` . This command gives the filetype of all the files it the current directory i.e. inhere. We can see that only the `-file07` file has ASCII filetype. So we can read this file using `cat <-file07`.
@@ -70,7 +70,7 @@ Password : lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 
 ---------------------------------------------------------------------------------------
 
-### Bandit Level 6
+### Bandit Level 5 to Level 6
 The password for the next level is stored in a file somewhere under the inhere directory (which itself has about 20 directories) and has all of the following properties:
 
 `human-readable
@@ -92,7 +92,7 @@ To use `find` with such properties we can use :
 Password : P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
 
 --------------------------------------------------------------------------------------------
-### Bandit Level 7
+### Bandit Level 6 to Level 7
 The password for the next level is stored somewhere on the server and has all of the following properties:
 
 `owned by user bandit7`
@@ -119,7 +119,7 @@ Password : z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
 
 --------------------------------------------------------------------------------------------------
 
-### Bandit Level 8
+### Bandit Level 7 to Level 8
 The password for the next level is stored in the file data.txt next to the word millionth.
 
 To read this line we will use grep command. `grep millionth *` will output all the line in the directory which have millionth word.
@@ -130,7 +130,7 @@ Password : TESKZC0XvTetK0S9xNwm25STk5iWrBvP
 
 ---------------------------------------------------------------------------------------------------
 
-### Bandit Level 9
+### Bandit Level 8 to Level 9
 The password for the next level is stored in the file data.txt and is the only line of text that occurs only once.
 
 Use `sort` to sort the data and then use `uniq -u` to print the lines which occur only once.
@@ -153,7 +153,7 @@ Password : EN632PlfYiZbn3PhVK3XOGSlNInNE00t
 
 --------------------------------------------------------------------------------------------------------
 
-### Bandit Level 10
+### Bandit Level 9 to Level 10
 To read human-readble strings in file we can use `strings` command in linux .
 
 The strings command in Unix-like operating systems is used to extract printable characters from a binary file. It essentially scans the file for sequences of printable characters and displays them to the user. Here's a detailed explanation of its functionality and usage:
@@ -165,7 +165,7 @@ Password : G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
 
 ----------------------------------------------------------------------------------------------------------
 
-### Bandit Level 11
+### Bandit Level 10 to Level 11
 The password is encoded in `base64` inside data.txt .
 
 Base64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format by converting it into a sequence of printable characters. In Base64 encoding, every three bytes of binary data are represented as four printable ASCII characters.
@@ -176,7 +176,7 @@ Password : 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
 
 -------------------------------------------------------------------------------------------------------------
 
-### Bandit Level 12
+### Bandit Level 11 to Level 12
 The password is in data.txt file encoded in `ROT13` format .
 
 To decode the file we will use translate `tr` command to rotate all the letters .
@@ -199,5 +199,21 @@ Password : JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
 
 --------------------------------------------------------------------------------------------------------------------
 
-### Bandit Level 13
+### Bandit Level 12 to Level 13
 
+-------------------------------------------------------------------------------------------------------------------
+
+### Bandit Level 13 to Level 14
+
+------------------------------------------------------------------------------------------------------------------
+
+### Bandit Level 14 to Level 15
+We use netcat command (nc) to connect to network `localhost` on port `30000` .
+
+We then submit password of previous level . After that password for level 15 will surface.
+
+`nc localhost 30000`
+
+Password : jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+
+--------------------------------------------------------------------------------------------------------------------
