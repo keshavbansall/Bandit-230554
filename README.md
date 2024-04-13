@@ -166,3 +166,14 @@ Password : G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
 ----------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 11
+The password is encoded in `base64` inside data.txt .
+
+Base64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format by converting it into a sequence of printable characters. In Base64 encoding, every three bytes of binary data are represented as four printable ASCII characters.
+
+So we will use `base64 data.txt -d`
+
+Password : 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+
+-------------------------------------------------------------------------------------------------------------
+
+### Bandit Level 12
