@@ -1,4 +1,8 @@
 # Bandit-(Keshav Bansal)(230554)
+### General Commands
+
+---------------------------------------------------------------------------
+
 ### Bandit Level 0
 In the level 0 of the game we have to log into the game using the `ssh` command.
 
@@ -8,7 +12,7 @@ SSH or Secure Shell is a network protocol that allows secure communication betwe
 
 Passsword : bandit0
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 ### Bandit Level 1
 The password is in *readme* file in home directory.
@@ -24,3 +28,21 @@ The password is stored in file with name as  -. Since the filename starts with a
 To view contents of file use `cat <-` or `more -`.
 
 Password : rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+
+--------------------------------------------------------------------------------
+
+### Bandit Level 3
+The password is stored in file with spaces in its name. `more` or `cat` command by default doesnt perceive a filename with spaces because the general syntax for Linux commands is  `command [options] argument1 argument2` here, the arguments are separated by spaces so if we try to use filenames with spaces directly, it will be treated as separate arguments rather than just one argument.
+
+To view file contents we will have to use :
+
+    `more "spaces in this filename"` or `cat "spaces in this filename"` : Here the entire name in `""` will be read as a single file name.
+
+    or
+
+    `more spaces\ in\ this\ filename` or `cat spaces\ in\ this\ filename` : Here the backslashes `\` cancels the more to read spaces .
+
+Password : aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+
+------------------------------------------------------------------------------------
+
