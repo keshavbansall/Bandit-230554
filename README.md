@@ -71,3 +71,23 @@ Password : lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 ---------------------------------------------------------------------------------------
 
 ### Bandit Level 6
+The password for the next level is stored in a file somewhere under the inhere directory (which itself has about 20 directories) and has all of the following properties:
+
+`human-readable
+1033 bytes in size
+not executable`
+
+To use `find` with such properties we can use :
+
+    `-size 1033c`  : can be used to display only files of size 1033 bytes.
+
+    `! -executable`  : is used to find non executable file .
+
+    File is a bash command to execute it as well we use `-exec file '{}' \;` . Now to only display files of ASCII data type we use | grep ASCII 
+
+#NOTE: `\;` is used to properly terminate the exec command .
+
+Password : P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+--------------------------------------------------------------------------------------------
+### Bandit Level 7
