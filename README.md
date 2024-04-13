@@ -80,10 +80,12 @@ not executable`
 To use `find` with such properties we can use :
 
     `-size 1033c`  : can be used to display only files of size 1033 bytes.
-
+    
     `! -executable`  : is used to find non executable file .
-
-    File is a bash command to execute it as well we use `-exec file '{}' \;` . Now to only display files of ASCII data type we use | grep ASCII 
+    
+    File is a bash command to execute it as well we use `-exec file '{}' \;` .
+    
+    Now to only display files of ASCII data type we use | grep ASCII 
 
 #NOTE: `\;` is used to properly terminate the exec command .
 
@@ -93,9 +95,11 @@ Password : P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
 ### Bandit Level 7
 The password for the next level is stored somewhere on the server and has all of the following properties:
 
-`owned by user bandit7
-owned by group bandit6
-33 bytes in size`
+`owned by user bandit7`
+
+`owned by group bandit6`
+
+`33 bytes in size`
 
 To search the entire directory we will specify root directory as starting point using `("/")` .
 
@@ -150,3 +154,15 @@ Password : EN632PlfYiZbn3PhVK3XOGSlNInNE00t
 --------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 10
+To read human-readble strings in file we can use `strings` command in linux .
+
+The strings command in Unix-like operating systems is used to extract printable characters from a binary file. It essentially scans the file for sequences of printable characters and displays them to the user. Here's a detailed explanation of its functionality and usage:
+Purpose: The primary purpose of the strings command is to extract human-readable text strings from binary files. Binary files often contain strings of characters embedded within them, such as error messages, debug information, or other textual data. The strings command helps to extract and display these strings, making it easier for users to analyze the contents of binary files.
+
+The code will be as follows : `strings data.txt | grep ===` to filter human-readble lines that contain `("===")` within them.
+
+Password : G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+
+----------------------------------------------------------------------------------------------------------
+
+### Bandit Level 11
