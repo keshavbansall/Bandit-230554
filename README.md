@@ -1,7 +1,4 @@
 # OverTheWire:Bandit-(Keshav Bansal)(230554)
-### General Commands
-
----------------------------------------------------------------------------
 
 ### Bandit Level 0
 In the level 0 of the game we have to log into the game using the `ssh` command.
@@ -200,10 +197,25 @@ Password : JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
 --------------------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 12 to Level 13
+The file is a `hexdump` so first use `xxd -r data.txt ans` . This will convert hexdump back to a text file on which we have to operate. Now using `xxd *filename* | head` look at the first bytes of the file . Now from https://en.wikipedia.org/wiki/List_of_file_signatures check for the decompression we need to use. Rename the file accordingly and then decompress the file .
+
+Password : wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
 
 -------------------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 13 to Level 14
+Use the `scp` command to copy the private key file from remote system to local system. Change the permissions of this key file to be executed from `ssh -i` command and then use `ssh -i` command to login without password.
+
+    `scp -P 2220 bandit13@bandit.labs.overthewire.org:sshkey.private ./try`
+    `cd try`
+    `chmod 700 sshkey.private`
+    `ssh -i /home/keshav/try/sshkey.private bandit14@bandit.labs.overthewire.org -p 2220`
+
+After logging in we cane find the password in `/etc/bandit_pass/bandit14` :
+
+`cat /etc/bandit_pass/bandit14`
+
+Password : fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
 
 ------------------------------------------------------------------------------------------------------------------
 
