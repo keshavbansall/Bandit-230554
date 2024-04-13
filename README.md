@@ -105,6 +105,8 @@ To hide the error output stream we can redirect the error stream(descripitor 2) 
 
 `find / -size 33c  -user bandit7 -group bandit6 2>/dev/null`  #/dev/null: acts as a black hole for data in Linux , hence redirecting stderr to /dev/null esentially discards the data.
 
+Then use `cat /var/lib/dpkg/info/bandit7.password` to get the password.
+
 #Note: Using `2>/dev/null` discard all error messages. If we only want to discard error messages with a particular string we can use `2>&1` to redirect stderr to stdout then we can use `grep` command to filer out result from stdout.
 
 eg: `find / -size 33c  -user bandit7 -group bandit6 2>&1 | grep -v "Permission denied"`
