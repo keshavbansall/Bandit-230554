@@ -177,7 +177,7 @@ Password : 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
 -------------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 12
-The password is in data.txt file encoded in rotation 13 format .
+The password is in data.txt file encoded in `ROT13` format .
 
 To decode the file we will use translate `tr` command to rotate all the letters .
 
