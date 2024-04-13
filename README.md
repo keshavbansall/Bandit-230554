@@ -46,3 +46,28 @@ Password : aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
 
 ------------------------------------------------------------------------------------
 
+### Bandit Level 4
+The password is stored in hidden file in inhere directory .
+
+So first we use `cd inhere` to change directories.
+
+Then use `ls -a` to show all (including hidden ones) files and directories.
+
+Use `cat .hidden` or `more .hidden` to access the contents of hidden file .
+
+`.` before the filename hides the file/ directory .
+
+Password : 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+
+--------------------------------------------------------------------------------------
+
+### Bandit Level 5
+First we move to the inhere directory using `cd inhere`. `ls -a` lists all the files and directories in it. We see that there are 10 Dash file in the inhere directory. Since the password is stored in only human readable file i.e. the files in the directory will have Binary data type except for one which will have humanly readable which will be ASCII.
+
+To find such file in directory we use `file ./*` . This command gives the filetype of all the files it the current directory i.e. inhere. We can see that only the `-file07` file has ASCII filetype. So we can read this file using `cat <-file07`.
+
+Password : lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+---------------------------------------------------------------------------------------
+
+### Bandit Level 6
