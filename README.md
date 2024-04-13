@@ -211,7 +211,7 @@ Use the `scp` command to copy the private key file from remote system to local s
     `chmod 700 sshkey.private`
     `ssh -i /home/keshav/try/sshkey.private bandit14@bandit.labs.overthewire.org -p 2220`
 
-After logging in we cane find the password in `/etc/bandit_pass/bandit14` :
+After logging in we can find the password in `/etc/bandit_pass/bandit14` :
 
 `cat /etc/bandit_pass/bandit14`
 
