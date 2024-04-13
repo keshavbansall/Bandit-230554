@@ -177,3 +177,27 @@ Password : 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
 -------------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 12
+The password is in data.txt file encoded in rotation 13 format .
+
+To decode the file we will use translate `tr` command to rotate all the letters .
+
+The tr command in Unix-like operating systems is primarily used for translating or deleting characters. Its name stands for "translate" or "transliterate."
+
+The translate command will be written as follows `tr [A-Za-z] [N-ZA-Mn-za-m]` .
+
+We have to translate the data of data.txt so we will use :
+
+`cat data.txt | tr [A-Za-z] [N-ZA-Mn-za-m]` .
+
+It will the translate the data of the output of cat command i.e. the data of data.txt .
+
+The output is as follows:
+
+The password is JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+
+Password : JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+
+--------------------------------------------------------------------------------------------------------------------
+
+### Bandit Level 13
+
