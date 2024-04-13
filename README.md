@@ -1,4 +1,4 @@
-# Bandit-(Keshav Bansal)(230554)
+# OverTheWire:Bandit-(Keshav Bansal)(230554)
 ### General Commands
 
 ---------------------------------------------------------------------------
@@ -91,3 +91,26 @@ Password : P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
 
 --------------------------------------------------------------------------------------------
 ### Bandit Level 7
+The password for the next level is stored somewhere on the server and has all of the following properties:
+
+`owned by user bandit7
+owned by group bandit6
+33 bytes in size`
+
+To search the entire directory we will specify root directory as starting point using `("/")` .
+
+In Linux, when we execute a command, there are two primary output streams: standard output (stdout) and standard error (stderr).By default, both stdout and stderr are displayed on the terminal. They are separate streams, but they are often displayed together.
+
+To hide the error output stream we can redirect the error stream(descripitor 2) we can use :
+
+`find / -size 33c  -user bandit7 -group bandit6 2>/dev/null`  #/dev/null: acts as a black hole for data in Linux , hence redirecting stderr to /dev/null esentially discards the data.
+
+#Note: Using `2>/dev/null` discard all error messages. If we only want to discard error messages with a particular string we can use `2>&1` to redirect stderr to stdout then we can use `grep` command to filer out result from stdout.
+
+eg: `find / -size 33c  -user bandit7 -group bandit6 2>&1 | grep -v "Permission denied"`
+
+Password : z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+
+--------------------------------------------------------------------------------------------------
+
+### Bandit Level 8
