@@ -116,3 +116,37 @@ Password : z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
 --------------------------------------------------------------------------------------------------
 
 ### Bandit Level 8
+The password for the next level is stored in the file data.txt next to the word millionth.
+
+To read this line we will use grep command. `grep millionth *` will output all the line in the directory which have millionth word.
+
+For finding the line in a specific file such as data.txt use : `grep millionth data.txt` .
+
+Password : TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+
+---------------------------------------------------------------------------------------------------
+
+### Bandit Level 9
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once.
+
+Use `sort` to sort the data and then use `uniq -u` to print the lines which occur only once.
+
+Command is `sort data.txt | uniq -u`
+
+or 
+
+Use `sort` function to sort the data . Then on sorted output use `uniq -c` to count the number of all different kind of lines appearing.
+
+Now this `uniq -c` outputs the data in 2 column format so using using `-sort k 1n` we will sort the data on the basis of their occurance in the file.
+
+Finally use `head -1` and we get the line which only repeats once in the output.
+
+Command is `sort data.txt | uniq -c | sort -k 1n | head -1`
+
+Password : EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+
+`NOTE: uniq command only detects adjacent duplicates hence it is important to use sort function before using uniq`
+
+--------------------------------------------------------------------------------------------------------
+
+### Bandit Level 10
