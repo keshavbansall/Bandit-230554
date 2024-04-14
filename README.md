@@ -256,12 +256,7 @@ Now since we have obtained the password to log into the next level we can logout
 ### Bandit Level 13 to Level 14
 Now we login into Level 13 of the game with the command `ssh -p 2220 bandit13@bandit.labs.overthewire.org` and password from the previous level.
 
-Use the `scp` command to copy the private key file from remote system to local system. Change the permissions of this key file to be executed from `ssh -i` command and then use `ssh -i` command to login without password.
-
-    `scp -P 2220 bandit13@bandit.labs.overthewire.org:sshkey.private ./try`
-    `cd try`
-    `chmod 700 sshkey.private`
-    `ssh -i /home/keshav/try/sshkey.private bandit14@bandit.labs.overthewire.org -p 2220`
+First if we list the file =s using `ls` it shows sshkey.private. Then we login as bandit 14 to local host using `ssh -i sshkey.private bandit14@localhost` .
 
 After logging in we can find the password in `/etc/bandit_pass/bandit14` :
 
