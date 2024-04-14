@@ -35,7 +35,7 @@ Now since we have obtained the password to log into the next level we can logout
 --------------------------------------------------------------------------------
 
 ### Bandit Level 2 to Level 3
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit2@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 2 of the game with the command `ssh -p 2220 bandit2@bandit.labs.overthewire.org` and password from the previous level.
 
 The password is stored in file with spaces in its name. `more` or `cat` command by default doesnt perceive a filename with spaces because the general syntax for Linux commands is  `command [options] argument1 argument2` here, the arguments are separated by spaces so if we try to use filenames with spaces directly, it will be treated as separate arguments rather than just one argument.
 
@@ -54,7 +54,7 @@ Now since we have obtained the password to log into the next level we can logout
 ------------------------------------------------------------------------------------
 
 ### Bandit Level 3 to Level 4
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit3@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 3 of the game with the command `ssh -p 2220 bandit3@bandit.labs.overthewire.org` and password from the previous level.
 
 The password is stored in hidden file in inhere directory .
 
@@ -73,7 +73,7 @@ Now since we have obtained the password to log into the next level we can logout
 --------------------------------------------------------------------------------------
 
 ### Bandit Level 4 to Level 5
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit4@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 4 of the game with the command `ssh -p 2220 bandit4@bandit.labs.overthewire.org` and password from the previous level.
 
 First we move to the inhere directory using `cd inhere`. `ls -a` lists all the files and directories in it. We see that there are 10 Dash file in the inhere directory. Since the password is stored in only human readable file i.e. the files in the directory will have Binary data type except for one which will have humanly readable which will be ASCII.
 
@@ -86,7 +86,7 @@ Now since we have obtained the password to log into the next level we can logout
 ---------------------------------------------------------------------------------------
 
 ### Bandit Level 5 to Level 6
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit5@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 5 of the game with the command `ssh -p 2220 bandit5@bandit.labs.overthewire.org` and password from the previous level.
 
 The password for the next level is stored in a file somewhere under the inhere directory (which itself has about 20 directories) and has all of the following properties:
 
@@ -112,7 +112,7 @@ Now since we have obtained the password to log into the next level we can logout
 
 --------------------------------------------------------------------------------------------
 ### Bandit Level 6 to Level 7
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit6@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 6 of the game with the command `ssh -p 2220 bandit6@bandit.labs.overthewire.org` and password from the previous level.
 
 The password for the next level is stored somewhere on the server and has all of the following properties:
 
@@ -143,7 +143,7 @@ Now since we have obtained the password to log into the next level we can logout
 --------------------------------------------------------------------------------------------------
 
 ### Bandit Level 7 to Level 8
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit7@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 7 of the game with the command `ssh -p 2220 bandit7@bandit.labs.overthewire.org` and password from the previous level.
 
 The password for the next level is stored in the file data.txt next to the word millionth.
 
@@ -158,7 +158,7 @@ Now since we have obtained the password to log into the next level we can logout
 ---------------------------------------------------------------------------------------------------
 
 ### Bandit Level 8 to Level 9
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit8@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 8 of the game with the command `ssh -p 2220 bandit8@bandit.labs.overthewire.org` and password from the previous level.
 
 The password for the next level is stored in the file data.txt and is the only line of text that occurs only once.
 
@@ -185,7 +185,7 @@ Now since we have obtained the password to log into the next level we can logout
 --------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 9 to Level 10
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit9@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 9 of the game with the command `ssh -p 2220 bandit9@bandit.labs.overthewire.org` and password from the previous level.
 
 To read human-readble strings in file we can use `strings` command in linux .
 
@@ -201,7 +201,7 @@ Now since we have obtained the password to log into the next level we can logout
 ----------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 10 to Level 11
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit10@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 10 of the game with the command `ssh -p 2220 bandit10@bandit.labs.overthewire.org` and password from the previous level.
 
 The password is encoded in `base64` inside data.txt .
 
@@ -216,7 +216,7 @@ Now since we have obtained the password to log into the next level we can logout
 -------------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 11 to Level 12
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit11@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 11 of the game with the command `ssh -p 2220 bandit11@bandit.labs.overthewire.org` and password from the previous level.
 
 The password is in data.txt file encoded in `ROT13` format .
 
@@ -243,7 +243,7 @@ Now since we have obtained the password to log into the next level we can logout
 --------------------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 12 to Level 13
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit12@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 12 of the game with the command `ssh -p 2220 bandit12@bandit.labs.overthewire.org` and password from the previous level.
 
 The file is a `hexdump` so first use `xxd -r data.txt ans` . This will convert hexdump back to a text file on which we have to operate. Now using `xxd *filename* | head` look at the first bytes of the file . Now from https://en.wikipedia.org/wiki/List_of_file_signatures check for the decompression we need to use. Rename the file accordingly and then decompress the file .
 
@@ -254,7 +254,7 @@ Now since we have obtained the password to log into the next level we can logout
 -------------------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 13 to Level 14
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit13@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 13 of the game with the command `ssh -p 2220 bandit13@bandit.labs.overthewire.org` and password from the previous level.
 
 Use the `scp` command to copy the private key file from remote system to local system. Change the permissions of this key file to be executed from `ssh -i` command and then use `ssh -i` command to login without password.
 
@@ -274,7 +274,7 @@ Now since we have obtained the password to log into the next level we can logout
 ------------------------------------------------------------------------------------------------------------------
 
 ### Bandit Level 14 to Level 15
-Now we login into Level 1 of the game with the command `ssh -p 2220 bandit14@bandit.labs.overthewire.org` and password from the previous level.
+Now we login into Level 14 of the game with the command `ssh -p 2220 bandit14@bandit.labs.overthewire.org` and password from the previous level.
 
 We use netcat command (nc) to connect to network `localhost` on port `30000` .
 
